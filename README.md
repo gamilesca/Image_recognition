@@ -40,6 +40,8 @@ classifier2.py --> Configuration only with internet datasets
 Layers parameters: 2 Convolution layers depth of the output feautured map 16, size of the patches extracted of the inputs 3x3 and 2 pooling layers
 
 Hyperparameters: batch size = 120 for training and 19 for validation & epoch = 15
+
+Value of epoch varies as long as the model starts to overfit; after that the learning process is stopped.
                   
 
 
