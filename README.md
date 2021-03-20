@@ -1,7 +1,7 @@
 # Image_recognition
 Image classification of plants
 
-Python libraries to be installed:
+Python libraries to be installed://
 sudo pip3 install matplotlib
 sudo pip3 install keras
 sudo pip3 install tensorflow
