@@ -30,7 +30,7 @@ train_generator = train_datagen.flow_from_directory(
         '/scratch/dcas/n.drougard/img_recog/train/',  # This is the source directory for training images
         classes = ['training_dataset_y+', 'training_dataset_y-'],
         target_size=(200, 200),  # All images will be resized to 200x200
-        batch_size=128,
+        batch_size=200,
         # Use binary labels
         class_mode='binary')
 
@@ -41,7 +41,7 @@ validation_generator = validation_datagen.flow_from_directory(
         '/scratch/dcas/n.drougard/img_recog/valid/',  # This is the source directory for training images
         classes = ['validation_dataset_y+', 'validation_dataset_y-'],
         target_size=(200, 200),  # All images will be resized to 200x200
-        batch_size=64,
+        batch_size=100,
         # Use binary labels
         class_mode='binary',
         shuffle=False)
@@ -86,7 +86,7 @@ cp_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_path,
 
 history = model.fit(train_generator,
       #steps_per_epoch=8,  
-      epochs=50,
+      epochs=30,
       verbose=1,
       validation_data = validation_generator,
       #validation_steps=8, 
